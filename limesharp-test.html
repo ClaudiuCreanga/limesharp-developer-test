@@ -1,0 +1,94 @@
+<?php
+/**
+ *
+ * Limeshrp Developers Test
+ *
+ * @author    Andrew Alabi
+ *
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    </script>
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <?php
+    /**
+     *
+     * Limeshrp Developers Test
+     *
+     * @author Andrew Alabi
+     *
+     */
+    ?>
+
+    <?php
+    /*
+    * Task 1: Repeat 3 times the content of an array
+    */
+    ?>
+    <section>
+    <?php echo "<strong>Task 1:</strong> Repeat 3 times the content of an array."; ?>
+    <br>
+    <br>
+    <?php
+      $array = array("php","html","css");
+      $string = implode(", ", $array);
+    ?>
+
+    <?php
+    for ($i = 0; $i < 3; $i++) {
+        echo "<div><span>" . $string . "</span></div>";
+    }
+    ?>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section>
+    <?php
+    /*
+    * Task 2: Remove all vowels and make all text lowercase except first the letter
+    */
+    ?>
+
+    <?php echo "<strong>Task 2:</strong> Remove all vowels and make all text lowercase except first the letter."; ?>
+    <br>
+    <br>
+    <?php
+      $text = ("liMeSHArp DeveLoper TEST");
+    ?>
+    <?php echo "<h1>liMeSHArp DeveLoper TEST</h1> <br/>"; ?>
+    <?php echo "<h2>RESULTS: " . ucfirst (strtolower(preg_replace("/[AEIOUaeiou]/", "", $text))) . "</h2>"; ?>
+    </section>
+
+  <section>
+    <?php $arr = array("1","1"); ?>
+    <?php
+    function next_binary_number($arr){
+      $c = count($arr);
+
+      if($arr[$c - 1] == 1) {
+       $arr[$c] = 0;
+       $arr[$c-1] = 0;
+      }
+
+      if($arr[$c - 1] == 0){
+        $arr[$c - 1] = 1;
+      } else {
+        return false;
+      }
+
+       print_r($arr);
+    }
+    ?>
+  </section>
+
+  </body>
+</html>
